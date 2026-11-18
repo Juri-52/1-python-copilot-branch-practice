@@ -1,4 +1,5 @@
 from inventory import Inventory
+from main import show_products
 from product import Product
 from storage import load_products
 
@@ -41,3 +42,21 @@ def test_empty_inventory():
     inventory = Inventory([])
 
     assert inventory.get_all() == []
+
+
+def test_get_low_stock_includes_zero_and_two_but_not_three():
+    inventory = Inventory([
+        Product(1, "在庫ゼロ", "飲料", 100, 0),
+        Product(2, "在庫二", "文房具", 100, 2),
+        Product(3, "在庫三", "文房具", 100, 3),
+    ])
+
+    low_stock = inventory.get_low_stock()
+
+    assert [product.stock for product in low_stock] == [0, 2]
+
+
+def test_show_products_reports_when_no_low_stock_products_exist(capsys):
+    show_products([])
+
+    assert capsys.readouterr().out == "該当する商品はありません。\n"

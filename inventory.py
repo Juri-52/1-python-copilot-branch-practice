@@ -5,3 +5,7 @@ class Inventory:
     def get_all(self):
         # 呼び出し側が一覧を並べ替えても元の順番を残す
         return self.products.copy()
+
+    def get_low_stock(self):
+        # stockが3未満の商品だけを、元の並び順で返す
+        return [product for product in self.products if product.stock < 3]
