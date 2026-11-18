@@ -32,5 +32,40 @@ README.mdとdocs/usage.mdでは、メニュー番号2、対象条件、対象商
 - data/products.jsonは変更していません。
 
 ## Gitの記録
-feature/low-stockブランチを作成後、当ブランチで変更作業を行った
-実装後にmainブランチへマージし、当ファイルを記述・コミットした
+```
+commit b259af6a2a42248bfd20d817e49a00d51f97f942 (HEAD -> main)
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 09:56:30 2026 +0900
+
+    作業記録を更新し、在庫不足商品の一覧機能の実装内容、テスト結果、Git操作のルールを明確化
+
+commit cdc58d7604475622c7b0ab4dde04ec775e9dada0 (feature/low-stock)
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 09:50:29 2026 +0900
+
+    READMEとusage.mdを更新し、在庫不足の商品表示機能の詳細を追加
+
+commit 13c7b142765d2378893bdeb2f4cef1c6a2279acd
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 09:46:18 2026 +0900
+
+    在庫不足の商品を取得する機能を追加し、メインメニューに表示オプションを追加。関連するテストケースも実装。
+
+commit 3402f14e6c531251b8833cab1fd0522b527a4236
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 09:45:02 2026 +0900
+
+    テストファイルの変更を許可するように作業ルールを更新
+
+commit 076695cfcf07158978e40bc5540f20ffdbcbeaac
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 09:37:29 2026 +0900
+
+    在庫不足一覧の要件を明確化し、表示条件を追加
+
+commit e41136ae12ce5b2db785ffa771ae1679db9cdd61 (tag: lesson16-start, origin/main, origin/HEAD)
+Author: Edward Shchigolev <shigorefu@icloud.com>
+Date:   Mon Nov 16 12:58:15 2026 +0900
+
+    商品管理の初期版と自主課題を追加
+```
